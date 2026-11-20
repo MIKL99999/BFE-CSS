@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BFE CSS — Truncate text with ellipsis in one line</title>
+  <!-- Main solution. Pick another variant from the list to preview it. -->
+  <link id="solution" rel="stylesheet" href="style.css" />
+  <style>
+    #picker { margin: 8px; font: 14px sans-serif; }
+    button { margin: 0 8px; font: 14px sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- Problem: https://bigfrontend.dev/css/truncate-text-with-ellipsis-in-one-line -->
+  <select id="picker" aria-label="Solution variant">
+    <option value="style.css">style.css (main: overflow: hidden)</option>
+    <option value="solutions/01-overflow-hidden.css">1. overflow: hidden</option>
+    <option value="solutions/02-overflow-clip.css">2. overflow: clip</option>
+    <option value="solutions/03-text-wrap-nowrap.css">3. text-wrap: nowrap</option>
+    <option value="solutions/04-line-clamp-fails.css">4. line-clamp: 1 (fails on BFE)</option>
+  </select>
+
+  <div class="one-line">BFE.dev is a great place to practice front-end interview questions</div>
+  <div class="one-line">Supercalifragilisticexpialidocious-without-any-spaces</div>
+
+  <!-- hidden is still a scroll container, clip is not: try it on variants 1 and 2. -->
+  <button id="scroll">scrollLeft = 100</button>
+
+  <script>
+    document.getElementById('picker').addEventListener('change', (e) => {
+      document.getElementById('solution').href = e.target.value;
+    });
+    document.getElementById('scroll').addEventListener('click', () => {
+      document.querySelectorAll('.one-line').forEach((el) => {
+        el.scrollLeft = el.scrollLeft ? 0 : 100;
+      });
+    });
+  </script>
+</body>
+</html>

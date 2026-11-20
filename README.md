@@ -40,3 +40,4 @@ bfe-css/
 | # | Problem | Status |
 |---|---------|--------|
 | 1 | [center-an-element-vertically](https://bigfrontend.dev/css/center-an-element-vertically) | ✅ |
+| 2 | [truncate-text-with-ellipsis-in-one-line](https://bigfrontend.dev/css/truncate-text-with-ellipsis-in-one-line) | ✅ |
