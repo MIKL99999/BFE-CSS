@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BFE CSS — Center an element vertically</title>
+  <!-- Main solution. Pick another variant from the list to preview it. -->
+  <link id="solution" rel="stylesheet" href="style.css" />
+  <style>
+    #picker { position: fixed; top: 8px; left: 8px; z-index: 1; font: 14px sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- Problem: https://bigfrontend.dev/css/center-an-element-vertically -->
+  <select id="picker" aria-label="Solution variant">
+    <option value="style.css">style.css (main: grid + place-items)</option>
+    <option value="solutions/01-flex.css">1. flex</option>
+    <option value="solutions/02-grid-place-items.css">2. grid + place-items</option>
+    <option value="solutions/03-grid-place-content.css">3. grid + place-content</option>
+    <option value="solutions/04-flex-margin-auto.css">4. flex + margin: auto</option>
+    <option value="solutions/05-absolute-transform.css">5. absolute + transform</option>
+    <option value="solutions/06-absolute-inset-margin-auto.css">6. absolute + inset + margin: auto</option>
+    <option value="solutions/07-absolute-calc.css">7. absolute + calc()</option>
+  </select>
+
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+
+  <script>
+    document.getElementById('picker').addEventListener('change', (e) => {
+      document.getElementById('solution').href = e.target.value;
+    });
+  </script>
+</body>
+</html>
