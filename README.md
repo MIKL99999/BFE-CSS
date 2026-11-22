@@ -13,7 +13,8 @@ bfe-css/
 │   └── style.css
 ├── center-an-element-vertically/  # https://bigfrontend.dev/css/center-an-element-vertically
 │   ├── index.html
-│   ├── style.css
+│   ├── style.css                  # main solution
+│   ├── solutions/                 # (optional) alternative approaches, one file each
 │   └── NOTES.md                   # (optional) notes, alternative approaches
 └── ...
 ```
@@ -38,4 +39,4 @@ bfe-css/
 
 | # | Problem | Status |
 |---|---------|--------|
-| 1 | [center-an-element-vertically](https://bigfrontend.dev/css/center-an-element-vertically) | ⬜ |
+| 1 | [center-an-element-vertically](https://bigfrontend.dev/css/center-an-element-vertically) | ✅ |
