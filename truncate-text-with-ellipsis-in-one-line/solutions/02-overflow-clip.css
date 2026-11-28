@@ -1,0 +1,18 @@
+/* Problem: https://bigfrontend.dev/css/truncate-text-with-ellipsis-in-one-line */
+
+/* Local preview only: a narrow box so the text overflows. */
+.one-line {
+  width: 200px;
+  padding: 4px 8px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  font: 16px sans-serif;
+}
+
+/* Solution: overflow: clip instead of hidden.
+   Same look, but the box is not a scroll container. */
+.one-line {
+  text-overflow: ellipsis;
+  overflow: clip;
+  white-space: nowrap;
+}
